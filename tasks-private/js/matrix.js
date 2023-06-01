@@ -66,7 +66,6 @@ const matrix = (value) => {
 
     return newMatrix;
 };
-// console.log(matrix(3));
 
 const createBoxesTopBottom = (amount, textContent) => {
     const container = document.createElement("div");
@@ -92,6 +91,7 @@ const createBoxesTopBottom = (amount, textContent) => {
 };
 
 const onClick = () => {
+    refs.frame.innerHTML = "";
     const value = refs.divCount.value;
     if (value < 3 || !value) return;
     const spiralMatrix = matrix(value);
